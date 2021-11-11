@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<title>JustGymFit :: Contact</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="gym.css" rel="stylesheet" media="screen">
+		<link href="gymprint.css" rel="stylesheet" media="print">
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<style>
+			form { display: flex;
+				   flex-flow: column nowrap;
+				   margin-left: auto;
+				   margin-right: auto;}
+	   
+			#text { text-align: center;}
+	   
+			input, datalist textarea { margin-bottom: .5em;}
+			
+			@media(min-width:600px){
+				form { width: 60%;
+			    display: grid;
+			    grid-gap: 1em;
+			    grid-template-columns: 9em 1fr;
+			    grid-template-rows: auto;}
+			   
+			  .sub { grid-row: auto; grid-column: 2/3; width: 7em;}
+	}
+		</style>
+	</head>
+	<body>
+		<div id="content">
+		<header id="top">
+			<h1><a href="contact.html">JustGymFit</a></h1>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="subscribe.html">Membership</a></li>
+				<li><a href="classes.html">Classes</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
+			</ul>
+		</nav>
+		<main>
+			<h2>Contact Us Today!</h2>
+			<p id="text">Required fields are marked with an asterisk *.</p>
+			<form method="post" action="https://webdevbasics.ent/scripts/demo.php">
+				<label for="myFname">* First Name</label>
+				<input type="text" name="myFname" id="myFname" required="required" placeholder="Your First Name">
+				
+				<label for="myLname">* Last Name</label>
+				<input type="text" name="myLname" id="myLname" required="required" placeholder="Your Last Name">
+				
+				<label for="myEmail">* E-mail</label>
+				<input type="email" name="myEmail" id="myEmail" required="required" placeholder="name@yourdomain.com">
+				
+				<label for="myReferral">How did you hear about us?</label>
+				<input type="text" name="myReferral" id="myReferral" list="referrals" placeholder="If other type it in.">
+					<datalist id="referrals">
+					<option>Google</option>
+					<option>Bing</option>
+					<option>Instagram</option>
+					<option>Friend</option>
+					<option>Magazine</option>
+					</datalist>
+					
+				<label for="myComments">* Comments</label>
+				<textarea name="myComments" id="myComments" rows="4" cols="20" required="required"></textarea>
+				
+				<div class="sub">
+				<input type="submit" value="Send">
+				</div>
+			</form>
+		</main>
+		<footer>
+			<div class="left">
+			<a href="#top">Back to top</a>
+			</div>
+			Copyright &copy;2021<br>
+			For any enquiries, <a href="contact.html">Contact Us</a>
+		</footer>
+		</div>
+	</body>
+</html>
